@@ -17,12 +17,13 @@ var carDetails = {
 }
 // Do not edit the code above.
 
+
 /*
   Use object destructuring to save the property values from the object carDetails into new variables. 
 */
 
-//Code Here
-
+let newCarDetails ,{color, make, model , year} = carDetails
+ console.log(newCarDetails);
 
 
 ////////// PROBLEM 2 //////////
@@ -33,15 +34,19 @@ var carDetails = {
   The property names are firstName, lastName, and title.
 */
 
+greeting(person)
 function greeting( obj ) {
-  //Code Here
+  let  {firstName, lastName, title} = obj
+  
   
   // Do not edit the code below.
   return 'Hello, ' + title + ' ' + firstName + ' ' + lastName + '!';
   // Do not edit the code above.
 }
 
-
+// let firstName = newGreeting.firstName
+// let lastName = newGreeting.lastName
+// let title = newGreeting.title
 
 ////////// PROBLEM 3 //////////
 
@@ -53,7 +58,10 @@ function greeting( obj ) {
   Sum up the values and return the total number.
 */
 
-//Code Here
+function totalPopulation(object){
+  let {utah, california, texas, arizona} = object;
+  return utah + california + texas + arizona;
+}
 
 
 
@@ -67,7 +75,13 @@ function greeting( obj ) {
   Push these new variables to an array and return the array. 
 */
 
-//Code Here
+function ingredients(object){
+
+  let{carb, fat, protein} = object
+  let arr = [carb , fat , protein ];
+
+  return arr;
+  }
 
 
 
@@ -85,7 +99,16 @@ function greeting( obj ) {
   Find the smallest number of the three and return that number.
 */
 
-//Code Here
+function largeNumbers(obj) {
+  let { first, second, third } = obj;
+  if (first < second && first < third) {
+    return first;
+  } else if (second < first && second < third) {
+    return second;
+  } else {
+    return third;
+  }
+}
 
 
 
@@ -97,6 +120,20 @@ function greeting( obj ) {
   Find the longest array and return that array.
 */
 
-//Code Here
+function numberGroups({a, b, c}){
+  if(a.length > b.length) {
+    if(a.length > c.length) {
+      return a
+    } else {
+      return c
+    }
+  } else if(b.length > c.length ) {
+    return b
+  }else {
+    return c
+  }
+}
+
+
 
 
